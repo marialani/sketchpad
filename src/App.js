@@ -1,12 +1,9 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import Paint from "./components/Paint";
+import "./App.css";
 
 const App = () => {
-  return (
-    <div>
-      <h1>Paint App</h1>
-    </div>
-  )
-}
+  return <Paint />;
+};
 
 export default App;

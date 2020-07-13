@@ -47,17 +47,14 @@ export default function Paint() {
             overflow: "hidden",
             margin: 0,
             backgroundImage: `radial-gradient(white 85%, ${activeColor})`,
-            maxHeight: "40vh",
           }}
         >
           <div
             style={{
               position: "relative",
               display: "flex",
-              maxHeight: "10vh",
               height: "10vh",
               alignItems: "flex-end",
-              // marginTop: "2rem",
             }}
           >
             <img
@@ -66,10 +63,8 @@ export default function Paint() {
               style={{
                 height: "75%",
                 width: "auto",
-                // position: "absolute",
                 left: "0",
                 bottom: "0",
-                // zIndex: "-1",
                 marginRight: "1.3rem",
               }}
             />
@@ -77,7 +72,6 @@ export default function Paint() {
               style={{
                 fontSize: "3rem",
                 color: `${activeColor}`,
-                // textDecoration: `underline ${activeColor}`,
                 WebkitTextStroke: "black 0.2px",
                 textAlign: "center",
                 width: "100%",
@@ -92,10 +86,8 @@ export default function Paint() {
               alt="pencil"
               style={{
                 height: "100%",
-                // position: "absolute",
                 right: "0",
                 bottom: "0",
-                // zIndex: "-1",
               }}
             />
           </div>
@@ -107,20 +99,18 @@ export default function Paint() {
               margin: 0,
               width: "60%",
               padding: "1rem",
-              maxHeight: "20vh",
               color: "black",
               WebkitTextStroke: "0.1px white",
               textShadow: "1px 1px 2px white",
-              // background: `linear-gradient(180deg, white 0%, ${activeColor} 100%)`,
               backgroundImage: `radial-gradient(${
                 activeColor && hexToRGBA(activeColor)
               }, transparent 75%), linear-gradient(180deg, white 0%, transparent 100%)`,
             }}
           >
-            Pick a colour and get sketching!
+            Pick a colour and start sketching!
             <br />
-            You will be given 5 shades of one colour, use the refresh button to
-            generate a new base colour.
+            You are always given 5 different shades of one colour, use the
+            refresh button to generate a new base colour.
             <br />
             Want to keep a copy of your sketch?
             <br />
@@ -136,7 +126,7 @@ export default function Paint() {
               marginTop: "10px",
               display: "flex",
               justifyContent: "space-evenly",
-              width: "50%",
+              width: "90%",
               alignSelf: "center",
               margin: "1rem 0 0.5rem 0",
               alignItems: "center",
@@ -145,7 +135,9 @@ export default function Paint() {
             <div style={{ fontFamily: "Cabin Sketch, cursive" }}>
               YOUR COLOUR IS:{" "}
               <span
-                style={{ textDecoration: `underline double ${activeColor}` }}
+                style={{
+                  textDecoration: `underline double ${activeColor}`,
+                }}
               >
                 {activeColor}
               </span>

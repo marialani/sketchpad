@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-// import useWindowSize from "./WindowSize";
 
 export default function Canvas(props) {
   const [drawing, setDrawing] = useState(false);
@@ -12,11 +11,6 @@ export default function Canvas(props) {
   useEffect(() => {
     ctx.current = canvasRef.current.getContext("2d");
   }, []);
-
-  // const [windowWidth, windowHeight] = useWindowSize(() => {
-  //   setWidth(window.innerWidth);
-  //   setHeight(window.innerHeight);
-  // });
 
   function handleMouseMove(e) {
     // actual coordinates
@@ -59,6 +53,10 @@ export default function Canvas(props) {
       onMouseUp={stopDrawing}
       onMouseOut={stopDrawing}
       onMouseMove={handleMouseMove}
+      style={{
+        background: "url(canvas-bkg.jpg)",
+        backgroundSize: "100%",
+      }}
     />
   );
 }
